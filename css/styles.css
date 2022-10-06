@@ -244,10 +244,11 @@ a.links {
   width: 44px;
   height: 44px;
   margin-right: 10px;
-  
-  
-}
 
+}
+/* .footer-social-item{
+  transition: background-color var(--transition-speed);
+} */
 .social-item:last-child {
   margin-right: 0;
 }
@@ -256,10 +257,11 @@ a.links {
   display: flex;
   width: 44px;
   height: 44px;
-
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   color: var(--primary-icon-color);
-  background-color: var(--primary-icon-color);
+  /* background-color: var(--primary-icon-color); */
   transition: background-color var(--transition-speed),
     color var(--transition-speed);
 }
@@ -271,11 +273,13 @@ a.links {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  fill: var(--primary-white-color);
+  color: var(--primary-white-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-speed), 
+     color var(--transition-speed);
 }
-.social-link :hover,
-.social-link :focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
   transition: background-color var(--transition-speed),fill var(--transition-speed);
@@ -287,8 +291,8 @@ a.links {
   fill: var(--primary-white-color);
   transition: var(--transition-speed),fill var(--transition-speed);
 } */
-.footer-social-item :hover,
-.footer-social-item :focus {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--accent-color);
   transition: background-color var(--transition-speed),fill var(--transition-speed);
 }
@@ -503,6 +507,7 @@ a.links {
 .address-map:focus {
   color: var(--accent-color);
   transition: var(--transition-speed);
+
 }
 
 .tel,
@@ -513,6 +518,7 @@ a.links {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-speed);
 }
 .address {
   font-style: normal;
@@ -569,7 +575,7 @@ a.links {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
 .project-link:hover,
-er.project-link:focus {
+.project-link:focus {
   box-shadow: var(--card-projects-portfolio);
   transition: var(--transition-speed);
 }
@@ -578,14 +584,16 @@ er.project-link:focus {
 .project-item {
   display: block;
   text-decoration: none;
+  transform: translateY(-100%) var(--transition-speed);
 }
+
 .project-link {
   box-shadow: var(--project-item-shadow);
 }
 
-.nav-buttons :hover,
-.nav-buttons :focus {
-  background: var(--accent-color);
+.nav-button:hover,
+.nav-button:focus {
+  background-color: var(--accent-color);
   box-shadow: var(--card-shadow-portfolio);
   border-radius: 4px;
   color: var(--primary-white-color);
@@ -604,6 +612,12 @@ er.project-link:focus {
   background-color: var(--our-team-white);
   color: var(--hero-black-color);
   padding: 6px 22px;
+  transition: background-color var(--transition-speed),
+color var(--transition-speed),
+box-shadow var(--transition-speed),
+background-color var(--transition-speed),
+border-radius var(--transition-speed);
+
 }
 .gallery-desk {
   padding-top: 20px;
@@ -634,6 +648,7 @@ er.project-link:focus {
 .address-map {
   color: var(--primary-white-color);
   text-decoration: none;
+  transition: color var(--transition-speed);
 }
 .nav-footer {
   padding: 0px;
@@ -754,6 +769,7 @@ er.project-link:focus {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+  /* transform: translateY(-100%) var(--transition-speed); */
 }
 
 /* modal */
@@ -761,7 +777,7 @@ er.project-link:focus {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  /* z-index: 100; */
   width: 100%;
   height: 100%;
   /* background: rgba(0, 0, 0, 0.2); */
@@ -810,6 +826,6 @@ er.project-link:focus {
   width: 30px;
   height: 30px;
 }
-/* .modal-close-icon {
-  fill: var(--primary-black-color);
-} */
+.modal-close-icon {
+cursor: pointer;
+}
